@@ -71,8 +71,6 @@ function Notes() {
 
     try {
       setLoading(true);
-
-      // IMPORTANT: Only send title and description!
       await axios.post(
         "/notes",
         {
@@ -122,6 +120,7 @@ function Notes() {
 
     try {
       setLoading(true);
+ HEAD
       await axios.put(
         `/notes/${editingNoteId}`,
         {
